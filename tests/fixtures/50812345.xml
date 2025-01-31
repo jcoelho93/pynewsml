@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<NewsML>
+    <TopicSet FormalName="NewsAgencyTopicSet" />
+    <NewsEnvelope>
+        <DateAndTime>20250128T101530</DateAndTime>
+        <NewsProduct FormalName="Serviço Tecnologia" />
+        <Priority FormalName="4" />
+    </NewsEnvelope>
+    <NewsItem>
+        <Identification>
+            <NewsIdentifier>
+                <ProviderId>NewsAgency.com</ProviderId>
+                <DateId>20250128</DateId>
+                <NewsItemId>50812345</NewsItemId>
+                <RevisionId Update="N" PreviousRevision="0">1</RevisionId>
+                <PublicIdentifier>urn:newsml:NewsAgency.com:20250128:50812345:1</PublicIdentifier>
+            </NewsIdentifier>
+            <DateLabel>28/01/2025 10:15:30</DateLabel>
+        </Identification>
+        <NewsManagement>
+            <NewsItemType FormalName="News" />
+            <FirstCreated>20250128T101530</FirstCreated>
+            <ThisRevisionCreated>20250128T101530</ThisRevisionCreated>
+            <Status FormalName="Usable" />
+        </NewsManagement>
+        <NewsComponent Essential="no" EquivalentsList="no">
+            <TopicSet FormalName="NewsSubjects">
+                <Topic>
+                    <TopicType FormalName="Subject" Scheme="IptcTopicType" />
+                    <FormalName Scheme="IptcSubjectCodes">06000000</FormalName>
+                    <Description xml:lang="en" Variant="Category">TEC</Description>
+                    <Description xml:lang="pt" Variant="Name">Tecnologia</Description>
+                    <Description xml:lang="en" Variant="Name">technology</Description>
+                    <Description xml:lang="fr" Variant="Name">technologie</Description>
+                </Topic>
+                <Topic>
+                    <TopicType FormalName="SubjectMatter" Scheme="IptcTopicType" />
+                    <FormalName Scheme="IptcSubjectCodes">06002000</FormalName>
+                    <Description xml:lang="pt" Variant="Name">Inovações</Description>
+                    <Description xml:lang="en" Variant="Name">innovations</Description>
+                    <Description xml:lang="fr" Variant="Name">innovations</Description>
+                </Topic>
+            </TopicSet>
+            <NewsLines>
+                <HeadLine><![CDATA[BREVES: Tecnologia - Novidades de Inovação]]></HeadLine>
+                <SubHeadLine><![CDATA[Lisboa, 28 jan 2025 (NewsAgency) -- Notícias breves de tecnologia:]]></SubHeadLine>
+                <ByLine>Maria Antunes</ByLine>
+                <DateLine>28/01/2025</DateLine>
+                <CreditLine>NewsAgency</CreditLine>
+                <CopyrightLine>© 2025 NewsAgency - Agência de Notícias de Portugal, S.A.</CopyrightLine>
+                <KeywordLine xml:lang="x-default">TECNOLOGIA</KeywordLine>
+                <KeywordLine xml:lang="en">TECHNOLOGY</KeywordLine>
+                <KeywordLine xml:lang="fr">TECHNOLOGIE</KeywordLine>
+                <NewsLine>
+                    <NewsLineText><![CDATA[]]></NewsLineText>
+                </NewsLine>
+            </NewsLines>
+            <AdministrativeMetadata>
+                <FileName>50812345.xml</FileName>
+                <Source>
+                    <Party FormalName="NewsAgency" />
+                </Source>
+                <Property FormalName="Domestic_Foreign" Value="Domestic" />
+            </AdministrativeMetadata>
+            <DescriptiveMetadata>
+                <Language FormalName="PT" />
+                <Genre FormalName="Notícia" />
+                <SubjectCode>
+                    <Subject FormalName="06000000" Scheme="IptcSubjectCodes" />
+                    <SubjectMatter FormalName="06002000" Scheme="IptcSubjectCodes" />
+                </SubjectCode>
+                <Property FormalName="Country" Value="PRT" />
+                <Property FormalName="City" Value="Lisboa" />
+                <Property FormalName="Region" Value="Lisboa" />
+                <Location HowPresent="Origin">
+                    <Property FormalName="Country" Value="PRT" />
+                    <Property FormalName="CountryName" Value="Portugal" />
+                    <Property FormalName="CountryArea" Value="Lisboa" />
+                    <Property FormalName="SubCountryArea" Value="Lisboa" />
+                    <Property FormalName="City" Value="Lisboa" />
+                </Location>
+            </DescriptiveMetadata>
+            <ContentItem>
+                <MediaType FormalName="HTML" />
+                <Characteristics>
+                    <Property FormalName="Desk" Value="DI-Tecnologia" />
+                    <Property FormalName="LGR" Value="LGR12345" />
+                    <Property FormalName="WordCount" Value="420" />
+                </Characteristics>
+                <DataContent><![CDATA[<P>Lisboa, 28 jan 2025 (NewsAgency) -- Notícias breves de tecnologia: </P>
+<P></P>
+<P></P>
+<P>Startup portuguesa desenvolve ferramenta para otimizar entregas</P>
+<P></P>
+<P>A startup lusitana “SmartRoutes” anunciou hoje o lançamento de uma nova ferramenta que promete reduzir o tempo e os custos das entregas em até 30%. A solução utiliza inteligência artificial para planeamento logístico.</P>
+<P>A tecnologia já está em fase de testes em empresas de logística na Europa e deverá ser expandida globalmente no segundo semestre de 2025, segundo a empresa.</P>
+<P></P>
+<P>Projeto europeu investe 10 milhões de euros em cidades inteligentes</P>
+<P></P>
+<P>Um consórcio de países europeus revelou um investimento de 10 milhões de euros no desenvolvimento de tecnologias para cidades inteligentes. A iniciativa, batizada de “SmartUrban2025”, inclui Portugal e será coordenada pelo Instituto Nacional de Inovação (INI).</P>
+<P>O objetivo é melhorar a sustentabilidade e eficiência energética nas zonas urbanas, aplicando tecnologias avançadas como IoT e redes 5G.</P>
+<P></P>
+<P>Compra online cresce 45% em Portugal em 2024</P>
+<P></P>
+<P>Dados do Instituto de Estatística Nacional (INE) indicam que o comércio eletrónico em Portugal cresceu 45% em 2024, impulsionado por promoções online e maior adesão de consumidores a marketplaces.</P>
+<P>Os setores com maior destaque foram moda, eletrónicos e produtos para casa.</P>
+<P></P>
+<P>MA // EA</P>
+<P>NewsAgency/Fim</P>]]></DataContent>
+            </ContentItem>
+        </NewsComponent>
+    </NewsItem>
+</NewsML>
