@@ -11,6 +11,15 @@ class TestNewsML(TestCase):
 
         self.assertEqual(len(newsml.news_items), 1)
 
+        item = newsml.news_items[0]
+
+        self.assertEqual(
+            item.news_component.descriptive_metadata.location.get(
+                "City"),
+            "Lisboa"
+        )
+        self.assertEqual(item.news_lines.byline, "Maria Antunes")
+
 
 if __name__ == '__main__':
     unittest.main()

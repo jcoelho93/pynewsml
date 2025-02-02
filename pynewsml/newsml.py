@@ -50,11 +50,60 @@ class ContentItem:
 
 
 @dataclass
+class Location:
+    country: str
+    country_name: str
+    country_area: str
+    sub_country_area: str
+    city: str
+
+
+@dataclass
+class SubjectCode:
+    formal_name: str
+    scheme: str
+
+
+@dataclass
+class DescriptiveMetadata:
+    language: str
+    genre: str
+    location: Location
+    properties: dict
+    subject_codes: List[SubjectCode]
+
+    @classmethod
+    def from_xml(cls, elem):
+        language = elem.find("Language").get("FormalName")
+        genre = elem.find("Genre").get("FormalName")
+
+        subject_codes = [SubjectCode(e.get("FormalName"), e.get("Scheme"))
+                         for e in elem.find("SubjectCode").iter() if e.tag != "SubjectCode"]
+
+        properties = {
+            prop.get("FormalName"): prop.get("Value")
+            for prop in elem.findall("Property")
+        }
+        location = {
+            prop.get("FormalName"): prop.get("Value")
+            for prop in elem.find("Location").findall("Property")
+        }
+
+        return cls(language, genre, location, properties, subject_codes)
+
+
+@dataclass
+class NewsComponent:
+    descriptive_metadata: DescriptiveMetadata
+
+
+@dataclass
 class NewsItem:
     identifier: NewsIdentifier
     news_lines: NewsLines
     topics: List[Topic]
     content: ContentItem
+    news_component: NewsComponent
 
 
 @dataclass
@@ -87,6 +136,12 @@ class NewsML:
                     ".//KeywordLine")],
             )
 
+            descriptive_metadata = news_item_elem.find(
+                "NewsComponent").find("DescriptiveMetadata")
+            news_component = NewsComponent(
+                DescriptiveMetadata.from_xml(descriptive_metadata)
+            )
+
             topics = cls._load_topics(news_item_elem)
 
             content_elem = news_item_elem.find(".//ContentItem")
@@ -99,7 +154,14 @@ class NewsML:
             )
 
             news_items.append(
-                NewsItem(identifier, news_lines, topics, content))
+                NewsItem(
+                    identifier,
+                    news_lines,
+                    topics,
+                    content,
+                    news_component
+                )
+            )
 
         return NewsML(news_items)
 
@@ -108,7 +170,7 @@ class NewsML:
         topics = []
         for topic_elem in elem.findall(".//Topic"):
             descriptions = {desc.attrib.get(
-                "xml:lang"): desc.text for desc in topic_elem.findall(".//Description")}
+                "xml:lang"): desc.text for desc in topic_elem.findall("Description")}
             topics.append(
                 Topic(
                     topic_type=topic_elem.find(
