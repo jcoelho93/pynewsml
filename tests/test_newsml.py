@@ -14,9 +14,12 @@ class TestNewsML(TestCase):
         item = newsml.news_items[0]
 
         self.assertEqual(
-            item.news_component.descriptive_metadata.location.get(
-                "City"),
+            item.news_component.descriptive_metadata.location.city,
             "Lisboa"
+        )
+        self.assertEqual(
+            item.news_component.descriptive_metadata.location.country_name,
+            "Portugal"
         )
         self.assertEqual(item.news_lines.byline, "Maria Antunes")
 

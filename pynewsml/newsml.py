@@ -84,10 +84,17 @@ class DescriptiveMetadata:
             prop.get("FormalName"): prop.get("Value")
             for prop in elem.findall("Property")
         }
-        location = {
+        location_data = {
             prop.get("FormalName"): prop.get("Value")
             for prop in elem.find("Location").findall("Property")
         }
+        location = Location(
+            country=location_data.get("Country"),
+            country_name=location_data.get("CountryName"),
+            country_area=location_data.get("CountryArea"),
+            sub_country_area=location_data.get("SubCountryArea"),
+            city=location_data.get("City"),
+        )
 
         return cls(language, genre, location, properties, subject_codes)
 
