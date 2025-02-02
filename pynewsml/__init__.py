@@ -1,1 +1,1 @@
-from pynewsml.newsml import NewsML
+from pynewsml.newsml import NewsML, NewsItem
