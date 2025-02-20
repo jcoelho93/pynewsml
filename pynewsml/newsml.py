@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Dict, Optional
 from lxml import etree
 
 
@@ -45,8 +45,9 @@ class NewsLines:
 @dataclass
 class ContentItem:
     media_type: str
-    word_count: int
-    data_content: str
+    characteristics: Dict[str, str]
+    href: Optional[str]
+    data_content: Optional[str]
 
 
 @dataclass
@@ -109,7 +110,7 @@ class NewsItem:
     identifier: NewsIdentifier
     news_lines: NewsLines
     topics: List[Topic]
-    content: ContentItem
+    content: List[ContentItem]
     news_component: NewsComponent
 
 
@@ -151,21 +152,24 @@ class NewsML:
 
             topics = cls._load_topics(news_item_elem)
 
-            content_elem = news_item_elem.find(".//ContentItem")
-            content = ContentItem(
-                media_type=content_elem.find(
-                    ".//MediaType").attrib.get("FormalName"),
-                word_count=int(content_elem.find(
-                    ".//Property[@FormalName='WordCount']").attrib.get("Value")),
-                data_content=content_elem.findtext(".//DataContent"),
-            )
+            content_items = []
+            for content_elem in news_item_elem.findall(".//ContentItem"):
+                characteristics = content_elem.find(".//Characteristics")
+                content = ContentItem(
+                    media_type=content_elem.find(".//MediaType").get("FormalName"),
+                    href=content_elem.get("Href"),
+                    characteristics={c.get("FormalName"): c.get("Value")
+                                     for c in characteristics.findall("Property")},
+                    data_content=content_elem.findtext(".//DataContent"),
+                )
+                content_items.append(content)
 
             news_items.append(
                 NewsItem(
                     identifier,
                     news_lines,
                     topics,
-                    content,
+                    content_items,
                     news_component
                 )
             )

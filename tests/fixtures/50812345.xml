@@ -108,6 +108,15 @@
 <P>MA // EA</P>
 <P>NewsAgency/Fim</P>]]></DataContent>
             </ContentItem>
+            <ContentItem Href="44422035.jpg">
+                <MediaType FormalName="Photo" />
+                <Characteristics>
+                    <Property FormalName="Desk" Value="DI" />
+                    <SizeInBytes>11163106</SizeInBytes>
+                    <Property FormalName="Width" Value="7501" />
+                    <Property FormalName="Height" Value="5001" />
+                </Characteristics>
+            </ContentItem>
         </NewsComponent>
     </NewsItem>
 </NewsML>

@@ -23,6 +23,13 @@ class TestNewsML(TestCase):
         )
         self.assertEqual(item.news_lines.byline, "Maria Antunes")
 
+        self.assertEqual(len(item.content), 2)
+        for content in item.content:
+            if content.data_content == 'Photo':
+                self.assertIsNotNone(content.href)
+            if content.data_content == 'HTML':
+                self.assertIsNotNone(content.data_content)
+
 
 if __name__ == '__main__':
     unittest.main()
