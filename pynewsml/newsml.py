@@ -119,8 +119,8 @@ class NewsML:
     news_items: List[NewsItem] = field(default_factory=list)
 
     @classmethod
-    def from_xml(cls, xml_string: str) -> "NewsML":
-        root = etree.fromstring(xml_string.encode('utf-8'))
+    def from_xml(cls, xml_string: str, encoding: str = 'iso-8859-1') -> "NewsML":
+        root = etree.fromstring(xml_string.encode(encoding))
         news_items = []
 
         for news_item_elem in root.findall(".//NewsItem"):
