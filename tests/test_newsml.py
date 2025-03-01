@@ -5,7 +5,7 @@ from pynewsml import NewsML
 
 class TestNewsML(TestCase):
     def test_newsml(self):
-        with open('tests/fixtures/50812345.xml') as fp:
+        with open('tests/fixtures/50812345.xml', encoding='iso-8859-1') as fp:
             content = fp.read()
         newsml = NewsML.from_xml(content)
 

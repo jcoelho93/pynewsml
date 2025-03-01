@@ -3,7 +3,7 @@
     <TopicSet FormalName="NewsAgencyTopicSet" />
     <NewsEnvelope>
         <DateAndTime>20250128T101530</DateAndTime>
-        <NewsProduct FormalName="ServiÃ§o Tecnologia" />
+        <NewsProduct FormalName="Serviço Tecnologia" />
         <Priority FormalName="4" />
     </NewsEnvelope>
     <NewsItem>
@@ -36,18 +36,18 @@
                 <Topic>
                     <TopicType FormalName="SubjectMatter" Scheme="IptcTopicType" />
                     <FormalName Scheme="IptcSubjectCodes">06002000</FormalName>
-                    <Description xml:lang="pt" Variant="Name">InovaÃ§Ãµes</Description>
+                    <Description xml:lang="pt" Variant="Name">Inovações</Description>
                     <Description xml:lang="en" Variant="Name">innovations</Description>
                     <Description xml:lang="fr" Variant="Name">innovations</Description>
                 </Topic>
             </TopicSet>
             <NewsLines>
-                <HeadLine><![CDATA[BREVES: Tecnologia - Novidades de InovaÃ§Ã£o]]></HeadLine>
-                <SubHeadLine><![CDATA[Lisboa, 28 jan 2025 (NewsAgency) -- NotÃ­cias breves de tecnologia:]]></SubHeadLine>
+                <HeadLine><![CDATA[BREVES: Tecnologia - Novidades de Inovação]]></HeadLine>
+                <SubHeadLine><![CDATA[Lisboa, 28 jan 2025 (NewsAgency) -- Notícias breves de tecnologia:]]></SubHeadLine>
                 <ByLine>Maria Antunes</ByLine>
                 <DateLine>28/01/2025</DateLine>
                 <CreditLine>NewsAgency</CreditLine>
-                <CopyrightLine>Â© 2025 NewsAgency - AgÃªncia de NotÃ­cias de Portugal, S.A.</CopyrightLine>
+                <CopyrightLine>© 2025 NewsAgency - Agência de Notícias de Portugal, S.A.</CopyrightLine>
                 <KeywordLine xml:lang="x-default">TECNOLOGIA</KeywordLine>
                 <KeywordLine xml:lang="en">TECHNOLOGY</KeywordLine>
                 <KeywordLine xml:lang="fr">TECHNOLOGIE</KeywordLine>
@@ -64,7 +64,7 @@
             </AdministrativeMetadata>
             <DescriptiveMetadata>
                 <Language FormalName="PT" />
-                <Genre FormalName="NotÃ­cia" />
+                <Genre FormalName="Notícia" />
                 <SubjectCode>
                     <Subject FormalName="06000000" Scheme="IptcSubjectCodes" />
                     <SubjectMatter FormalName="06002000" Scheme="IptcSubjectCodes" />
@@ -87,23 +87,23 @@
                     <Property FormalName="LGR" Value="LGR12345" />
                     <Property FormalName="WordCount" Value="420" />
                 </Characteristics>
-                <DataContent><![CDATA[<P>Lisboa, 28 jan 2025 (NewsAgency) -- NotÃ­cias breves de tecnologia: </P>
+                <DataContent><![CDATA[<P>Lisboa, 28 jan 2025 (NewsAgency) -- Notícias breves de tecnologia: </P>
 <P></P>
 <P></P>
 <P>Startup portuguesa desenvolve ferramenta para otimizar entregas</P>
 <P></P>
-<P>A startup lusitana â€œSmartRoutesâ€ anunciou hoje o lanÃ§amento de uma nova ferramenta que promete reduzir o tempo e os custos das entregas em atÃ© 30%. A soluÃ§Ã£o utiliza inteligÃªncia artificial para planeamento logÃ­stico.</P>
-<P>A tecnologia jÃ¡ estÃ¡ em fase de testes em empresas de logÃ­stica na Europa e deverÃ¡ ser expandida globalmente no segundo semestre de 2025, segundo a empresa.</P>
+<P>A startup lusitana ?SmartRoutes? anunciou hoje o lançamento de uma nova ferramenta que promete reduzir o tempo e os custos das entregas em até 30%. A solução utiliza inteligência artificial para planeamento logístico.</P>
+<P>A tecnologia já está em fase de testes em empresas de logística na Europa e deverá ser expandida globalmente no segundo semestre de 2025, segundo a empresa.</P>
 <P></P>
-<P>Projeto europeu investe 10 milhÃµes de euros em cidades inteligentes</P>
+<P>Projeto europeu investe 10 milhões de euros em cidades inteligentes</P>
 <P></P>
-<P>Um consÃ³rcio de paÃ­ses europeus revelou um investimento de 10 milhÃµes de euros no desenvolvimento de tecnologias para cidades inteligentes. A iniciativa, batizada de â€œSmartUrban2025â€, inclui Portugal e serÃ¡ coordenada pelo Instituto Nacional de InovaÃ§Ã£o (INI).</P>
-<P>O objetivo Ã© melhorar a sustentabilidade e eficiÃªncia energÃ©tica nas zonas urbanas, aplicando tecnologias avanÃ§adas como IoT e redes 5G.</P>
+<P>Um consórcio de países europeus revelou um investimento de 10 milhões de euros no desenvolvimento de tecnologias para cidades inteligentes. A iniciativa, batizada de ?SmartUrban2025?, inclui Portugal e será coordenada pelo Instituto Nacional de Inovação (INI).</P>
+<P>O objetivo é melhorar a sustentabilidade e eficiência energética nas zonas urbanas, aplicando tecnologias avançadas como IoT e redes 5G.</P>
 <P></P>
 <P>Compra online cresce 45% em Portugal em 2024</P>
 <P></P>
-<P>Dados do Instituto de EstatÃ­stica Nacional (INE) indicam que o comÃ©rcio eletrÃ³nico em Portugal cresceu 45% em 2024, impulsionado por promoÃ§Ãµes online e maior adesÃ£o de consumidores a marketplaces.</P>
-<P>Os setores com maior destaque foram moda, eletrÃ³nicos e produtos para casa.</P>
+<P>Dados do Instituto de Estatística Nacional (INE) indicam que o comércio eletrónico em Portugal cresceu 45% em 2024, impulsionado por promoções online e maior adesão de consumidores a marketplaces.</P>
+<P>Os setores com maior destaque foram moda, eletrónicos e produtos para casa.</P>
 <P></P>
 <P>MA // EA</P>
 <P>NewsAgency/Fim</P>]]></DataContent>
