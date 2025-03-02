@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pynewsml"
-version = "1.3.1"
+version = "1.4.0"
 description = "A NewsML parsing library"
 authors = ["José Coelho <16445494+jcoelho93@users.noreply.github.com>"]
 license = "MIT"
