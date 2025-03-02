@@ -1,3 +1,4 @@
+from datetime import datetime
 from dataclasses import dataclass, field
 from typing import List, Dict, Optional
 from lxml import etree
@@ -108,6 +109,7 @@ class NewsComponent:
 @dataclass
 class NewsItem:
     identifier: NewsIdentifier
+    date_label: datetime
     news_lines: NewsLines
     topics: List[Topic]
     content: List[ContentItem]
@@ -132,6 +134,9 @@ class NewsML:
                 public_identifier=news_item_elem.findtext(
                     ".//PublicIdentifier"),
             )
+
+            date_label = news_item_elem.findtext(".//DateLabel")
+            date_label = datetime.strptime(date_label, "%d/%m/%Y %H:%M:%S")
 
             news_lines = NewsLines(
                 headline=news_item_elem.findtext(".//HeadLine"),
@@ -167,6 +172,7 @@ class NewsML:
             news_items.append(
                 NewsItem(
                     identifier,
+                    date_label,
                     news_lines,
                     topics,
                     content_items,
